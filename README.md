@@ -8,5 +8,4 @@ De front-end is gerealiseerd in Angular 8.
 ## Opstarten
 1. Clone het project.
 2. Run 'npm install' in de root van het project.
-3. Run 'ng serve'.
-4. Open localhost:4200. 
+3. Run 'ng serve -o'.
