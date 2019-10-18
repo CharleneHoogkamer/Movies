@@ -1,0 +1,11 @@
+@import './../scss/variables';
+
+.container {
+  padding: 7px;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  @media ($tablet) {
+    padding: 50px;
+    width: 100vw;
+  }
+}

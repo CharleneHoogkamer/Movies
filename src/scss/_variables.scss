@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+// Colors
+$primary: #90caf9;
+$primary-light: #c3fdff;
+$primary-dark: #5d99c6;
+$secondary: #9fa8da;
+$secondary-light: #d1d9ff;
+$secondary-dark: #6f79a8;
+
+// Fonts
+$font-heading: 'Crimson Text', serif;
+$font-body: 'Lato', sans-serif;
+
+// Screen
+$largePhone: '(min-width: 400px';
+$tablet: 'min-width: 768px';
+$tabletLand: 'min-width: 1024px';
+$desktop: 'min-width: 1280px';
+$cinema: 'min-width: 2560px';
+$upToLargePhone: 'max-width: 399px';
+$upToTablet: 'max-width: 767px';
+$upToTabletLand: 'max-width: 1023px';
+$upToDesktop: 'max-width: 1279px';

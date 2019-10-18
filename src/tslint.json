@@ -1,0 +1,20 @@
+{
+    "rulesDirectory": ["../tslint.json", "tslint-plugin-prettier"],
+    "rules": {
+        "prettier": true,
+        "prettier/prettier": "error",
+        "directive-selector": [
+            true,
+            "attribute",
+            "app",
+            "camelCase"
+        ],
+        "component-selector": [
+            true,
+            "element",
+            "app",
+            "kebab-case"
+        ]
+    }
+  }
+  
