@@ -1,33 +1,33 @@
 <section class="movie-overview" *ngIf="doneLoading">
-  <section class="movie-overview__search">
+  <section class="search">
     <mat-form-field class="search__form">
       <input matInput placeholder="welke film ga je vanavond checken?" (keyup)="searchTerm$.next($event.target.value)" />
     </mat-form-field>
   </section>
-  <section class="movie-overview__filter">
+  <section class="filter">
     <span>Lastig he? Specificeer je zoekresultaten.</span> <br />
-    <button mat-raised-button class="filter__btn" (click)="toggleCategoryFilter()">Categorie</button>
+    <button mat-raised-button class="btn btn--filter" (click)="toggleCategoryFilter()">Categorie</button>
     <section class="filter__select">
-      <div [hidden]="!isShow" class="select__genres" *ngFor="let genre of genres">
+      <div [hidden]="!isShow" class="filter__select-genres" *ngFor="let genre of genres">
         <mat-checkbox (change)="filterByGenre(genre.id)" value="{{ genre.id }}">{{ genre.name }}</mat-checkbox>
       </div>
     </section>
   </section>
   <h2>Resultaten. {{ filteredMovies.length }}</h2>
-  <section class="movie-overview__movies">
+  <section class="movies">
     <ng-container *ngIf="filteredMovies && filteredMovies.length > 0">
       <ng-container *ngFor="let movie of filteredMovies | slice: 0:20">
-        <div class="movies__item">
+        <div class="movie">
           <img
-            class="item__image"
+            class="movie__image"
             src="{{ posterBaseUrl }}{{ movie.poster_path }}"
             onerror="src = './../../../assets/images/movie_image_fallback.png';"
           />
-          <div class="item__info">
+          <div class="movie__info">
             <h3>{{ movie.title }}</h3>
-            <span class="info__icon-star"><i class="material-icons"> star </i>{{ movie.vote_average }}</span>
+            <span class="icon icon--star"><i class="material-icons"> star </i>{{ movie.vote_average }}</span>
             <br />
-            <div class="info__genres">
+            <div class="movie__genres">
               <span *ngFor="let id of movie.genre_ids">{{ getGenreById(id) }}</span>
             </div>
           </div>
